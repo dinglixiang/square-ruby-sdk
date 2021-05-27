@@ -55,7 +55,7 @@ module Square
 
     # Method overridden from HttpClient.
     def convert_response(response, http_request)
-      HttpResponse.new(response.status, response.reason_phrase,
+      HttpResponse.new(response.status, nil,
                        response.headers, response.body, http_request)
     end
   end
